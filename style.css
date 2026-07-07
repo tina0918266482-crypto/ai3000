@@ -137,3 +137,60 @@ body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC","Micro
   .video-shimmer{background:linear-gradient(90deg,rgba(3,22,35,.88),rgba(3,22,35,.55),rgba(3,22,35,.18));}
   .hero{min-height:840px;}
 }
+
+
+/* ===== Google Drive Video Embed Fix ===== */
+.motion-stage.motion-video{
+  width:100%;
+  aspect-ratio:16 / 9;
+  border-radius:34px;
+  overflow:hidden;
+  background:#000;
+  box-shadow:var(--shadow);
+}
+.motion-stage.motion-video iframe,
+.motion-stage.motion-video .product-video{
+  display:block;
+  width:100%;
+  height:100%;
+  border:0;
+}
+.motion-stage.motion-video::before{
+  display:none;
+}
+.motion-stage.motion-video:hover{
+  transform:translateY(-6px);
+  box-shadow:0 32px 80px rgba(8,35,51,.18);
+}
+@media(max-width:900px){
+  .motion-stage.motion-video{
+    border-radius:24px;
+  }
+}
+
+
+/* ===== Hero Background Video Replacement ===== */
+.hero-media{
+  background:#071f2d;
+}
+.hero-bg-video{
+  position:absolute;
+  inset:-24px;
+  width:calc(100% + 48px);
+  height:calc(100% + 48px);
+  object-fit:cover;
+  object-position:center center;
+  filter:blur(2px) saturate(1.08) brightness(.9);
+  transform:scale(1.04);
+  animation:heroVideoDrift 18s ease-in-out infinite alternate;
+}
+.video-bg{display:none;}
+@keyframes heroVideoDrift{
+  from{transform:scale(1.04) translate3d(0,0,0);}
+  to{transform:scale(1.09) translate3d(-1.4%,0,0);}
+}
+@media(max-width:900px){
+  .hero-bg-video{
+    object-position:62% center;
+  }
+}

@@ -29,7 +29,9 @@
   <main>
     <section class="hero">
       <div class="hero-media" aria-hidden="true">
-        <div class="video-bg"></div>
+        <video class="hero-bg-video" autoplay muted loop playsinline preload="metadata" poster="assets/hero-style-reference.png">
+          <source src="assets/hero-clinic.mp4" type="video/mp4">
+        </video>
         <div class="video-shimmer"></div>
       </div>
       <div class="hero-overlay"></div>
@@ -115,12 +117,18 @@
     <section id="motion" class="section motion-section">
       <div class="motion-copy reveal">
         <p class="eyebrow dark">3D / Animation</p>
-        <h2>產品 3D 展示影片或動畫圖片</h2>
-        <p>此區可替換為 MP4、GIF、3D 旋轉模型或產品操作影片。現在先保留靜態展示區，滑鼠移入圖片、卡片與按鈕時會產生細緻互動效果。</p>
+        <h2>產品 3D 展示影片</h2>
+        <p>此區嵌入 Google Drive 產品展示影片，可觀看整機外觀、操作畫面與功能介紹。</p>
       </div>
-      <div class="motion-stage reveal">
-        <img src="assets/dm-front.jpg" alt="AI3000 產品 DM 正面" />
-        <button class="play-button" aria-label="播放產品展示影片">▶</button>
+      <div class="motion-stage motion-video reveal">
+        <iframe
+          class="product-video"
+          src="https://drive.google.com/file/d/1GUq-Y6KryI14r_C8IsPiHDNqvzWoUXkU/preview"
+          title="AI3000 產品展示影片"
+          allow="autoplay; fullscreen"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
       </div>
     </section>
 
