@@ -138,8 +138,8 @@ body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC","Micro
   .hero{min-height:840px;}
 }
 .brand-logo{
-    height:100px;
-    width:auto;
+    width:240px;
+    height:auto;
     display:block;
 }
 
