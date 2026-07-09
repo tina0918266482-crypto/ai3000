@@ -24,7 +24,6 @@
       <a href="#price">價格方案</a>
       <a href="#contact">歡迎合作</a>
     </nav>
-    <a class="phone-pill" href="tel:0800234000">☎ 0800-234-000</a>
   </header>
 
   <main>
@@ -161,16 +160,42 @@
 
     <section id="contact" class="section cta-section reveal">
       <h2>歡迎合作</h2>
-      <p>歡迎診所、藥局、健檢中心、企業健康管理、通路與活動檢測合作。</p>
-      <a class="btn btn-light" href="tel:0800234000">免費電話 0800-234-000</a>
-      <p class="warranty">保固兩年｜可洽詢展示、導入與合作方案</p>
+      <p>歡迎診所、藥局、健檢中心與企業合作。</p>
+
+<a href="tel:0800234000">免費電話 0800-234-000</a>
+
+<p>保固兩年｜提供展示、導入與合作方案。</p>
     </section>
   </main>
 
-  <footer class="footer">
-    <p>就是健康製造所股份有限公司｜Ai-3000 一頁式產品展示頁</p>
-  </footer>
+ <footer class="site-footer">
+  <p>Copyright © 2026 就是健康製造所股份有限公司</p>
+  <p>All rights reserved.</p>
+</footer>
 
   <script src="script.js"></script>
+ <script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mainNav = document.querySelector('.main-nav');
+
+  menuToggle.addEventListener('click', function () {
+    mainNav.classList.toggle('is-open');
+    menuToggle.classList.toggle('is-open');
+
+    if (mainNav.classList.contains('is-open')) {
+      menuToggle.textContent = '×';
+    } else {
+      menuToggle.textContent = '☰';
+    }
+  });
+
+  document.querySelectorAll('.main-nav a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      mainNav.classList.remove('is-open');
+      menuToggle.classList.remove('is-open');
+      menuToggle.textContent = '☰';
+    });
+  });
+</script>
 </body>
 </html>
